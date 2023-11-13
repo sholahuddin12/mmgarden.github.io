@@ -18,3 +18,4 @@ Route::get('/', [Controller::class, 'index']);
 Route::get('/listkavling', [Controller::class, 'listkavling']);
 Route::get('/kontak', [Controller::class, 'kontak']);
 Route::get('/panduan', [Controller::class, 'panduan']);
+Route::get('/database', [Controller::class, 'database']);

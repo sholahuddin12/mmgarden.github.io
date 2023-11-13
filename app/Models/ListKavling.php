@@ -10,4 +10,13 @@ class ListKavling extends Model
 {
     use HasFactory;
     use HasFormatRupiah;
+
+    protected $guarded = ['id'];
+
+    public function scopeFilter($query)
+    {
+        if (request('search')) {
+            $query->where('nama', 'like', '%' . request('search') . '%');
+        }
+    }
 }

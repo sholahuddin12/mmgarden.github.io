@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="icon" href="/img/icon.png" type="image/x-icon">
+
     <!-- CSS Bootstrap5 -->
     <link href="bootstrap-5/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 
@@ -27,8 +29,7 @@
         <nav class="navbar navbar-expand-lg container">
             <div class="container">
                 <a class="navbar-brand fs-2" href="/">
-                    {{-- <img src="/img/LOGO BP.png" alt="Logo" width="45" height="45" class="d-inline-block align-text-top"> --}}
-                    <b><span style="color: #0B63DC">MM</span>Garden</b>
+                    <img src="/img/LOGO BP.png" alt="Logo" height="50" class="d-inline-block align-text-top">
                 </a>
 
                 <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
@@ -42,13 +43,13 @@
                     <div class="offcanvas-body">
                         <ul class="navbar-nav justify-content-end fs-5 flex-grow-1 pe-3">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="/">Beranda</a>
+                                <a class="nav-link {{ $title == 'MMGarden | Home' ? 'active' : '' }}" aria-current="page" href="/">Beranda</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/listkavling">List Kavling</a>
+                                <a class="nav-link {{ $title == 'MMGarden | List' ? 'active' : '' }}" href="/listkavling">List Kavling</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/panduan">Panduan Pemesanan</a>
+                                <a class="nav-link {{ $title == 'MMGarden | Panduan' ? 'active' : '' }}" href="/panduan">Panduan Pemesanan</a>
                             </li>
                         </ul>
                     </div>
@@ -63,21 +64,21 @@
 
     <section id="footer" class="footer">
         <div class="container mt-4">
-            <div class="row justify-content-between pt-4">
-                <div class="col-lg-4 col-md-6 col-12">
+            <div class="row justify-content-between pt-2">
+                <div class="col-md-4 col-12 pt-3">
                     <p><strong>Lokasi Kavling Makam Madinah Memorial Garden :</strong></p>
                     <p>Kamp. Kebun Kopi, RT 03/02, Desa Sirnasari, Kec. Tanjungsari, Kab. Bogor, Prov Jawa Barat.</p>
                     <div class="text-center">
                         <a href="https://api.whatsapp.com/send?phone={{ $noWA }}" class="whatsapp">Hubungi Kami <i class="bi bi-whatsapp "></i></a>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-12">
+                <div class="col-md-4 col-12 pt-3 tengah">
                     <p><strong>Dikelola oleh :</strong></p>
                     <p>PT. Bogor Timur Perkasa.</p>
                     <p><strong>Alamat :</strong></p>
                     <p>Kamp. Sodong, RT 020/010, Desa Tanjungrasa, Kec. Tanjungsari, Kab. Bogor, Prov. Jawa Barat.</p>
                 </div>
-                <div class="col-lg-4 col-md-6 col-12">
+                <div class="col-md-4 col-12 pt-3 kanan">
                     <ul class="nav flex-column">
                         <li class="nav-item">
                           <a class="nav-link" aria-current="page" href="/">Beranda</a>

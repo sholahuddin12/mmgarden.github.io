@@ -28,17 +28,19 @@ class Controller extends BaseController
         ]);
     }
 
-    function kontak()
-    {
-        return view('kontak', [
-            "title" => "MMGarden | Kontak"
-        ]);
-    }
-
     function panduan()
     {
         return view('panduan', [
             "title" => "MMGarden | Panduan",
+            "noWA" => "6281213469281"
+        ]);
+    }
+
+    function database()
+    {
+        return view('database', [
+            "title" => "Database",
+            "listkavling" => ListKavling::latest()->filter()->get(),
             "noWA" => "6281213469281"
         ]);
     }

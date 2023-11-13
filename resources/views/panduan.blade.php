@@ -16,36 +16,44 @@
         <div class="row justify-content-center text-center">
             <h1>Terdapat Beberapa Pesanan yang Dapat dilakukan :</h1>
             <div class="col-lg-6 col-12 mt-3">
-                <div class="card">
+                <div class="card  panduan-card">
                     <div class="card-header">
                         Masa Berduka
                     </div>
                     <div class="card-body">
-                      <p class="card-text">Merupakan panduan untuk anda yang sedang berduka dan membutuhkan makam dengan se-segera mungkin. Kami memberikan layanan 24 jam untuk membantu kebutuhan kavling makam disaat kedukaan terjadi. Kami akan membantu mengurus persiapan prosesi pemakaman mulai dari persiapan penggalian, memonitor perjalanan jenazah dari rumah duka menuju Makam Madinah Memorial Garden sampai pelaksanaan prosesi pemakaman selesai.</p>
-                      <a href="#panduan1" class="btn btn-primary">Menuju Panduan</a>
+                      <p class="card-text align-top">Merupakan panduan untuk anda yang sedang berduka dan membutuhkan makam dengan se-segera mungkin. Kami memberikan layanan 24 jam untuk membantu kebutuhan kavling makam disaat kedukaan terjadi. Kami akan membantu mengurus persiapan prosesi pemakaman mulai dari persiapan penggalian, memonitor perjalanan jenazah dari rumah duka menuju Makam Madinah Memorial Garden sampai pelaksanaan prosesi pemakaman selesai.</p>
+                    </div>
+                    <div class="card-footer text-body-secondary">
+                        <a href="#panduan1" class="btn btn-panduan">Menuju Panduan</a>
                     </div>
                   </div>
             </div>
             <div class="col-lg-3 col-12 mt-3">
-                <div class="card">
+                <div class="card panduan-card">
                     <div class="card-header">
                         Masa Persiapan
                     </div>
                     <div class="card-body">
                       <p class="card-text">Merupakan panduan untuk anda yang ingin membuat persiapan di masa mendatang. Kami akan memberikan penjelasan detail mengenai produk kavling makam sesuai dengan kebutuhan.</p>
-                      <a href="#panduan2" class="btn btn-primary">Menuju Panduan</a>
+                    </div>
+                    <div class="card-footer text-body-secondary">
+                        <a href="#panduan2" class="btn btn-panduan">Menuju Panduan</a>
                     </div>
                   </div>
             </div>
             <div class="col-lg-3 col-12 mt-3">
-                <div class="card">
+                <div class="card  panduan-card">
                     <div class="card-header">
                         Pemindahan Makam Lama
                     </div>
                     <div class="card-body">
                       <p class="card-text">Merupakan panduan untuk anda yang memilki suatu kendala atau alasan tertentu untuk memindahkan makam lama ke makam Madinah Memorial Garden.</p>
-                      <a href="#panduan3" class="btn btn-primary">Menuju Panduan</a>
+                      
                     </div>
+                    <div class="card-footer text-body-secondary">
+                        <a href="#panduan3" class="btn btn-panduan">Menuju Panduan</a>
+                    </div>
+                    
                   </div>
             </div>
         </div>

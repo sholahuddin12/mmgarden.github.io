@@ -6,11 +6,11 @@
 <div class="jumbotron1 d-flex align-items-center">
     <div class="grid container text-center ">
         <div class="d-beranda mx-auto ">
-            <h1><b class="border-bottom">PEMAKAMAN ISLAMI</b></h1>
+            <h1><b>PEMAKAMAN ISLAMI</b></h1>
             <h2>Berdasarkan <b>Syariat Islam</b> dan dikelola secara <b>Profesional</b></h2>
             <br>
             <h2>Berlokasi di <b>Kabupaten Bogor</b></h2>
-            <a href="/listkavling" class="btn btn-primary rounded-pill">CEK SEKARANG</a>
+            <a href="/listkavling" class="btn rounded-pill mt-4">CEK SEKARANG</a>
         </div>
     </div>
 </div>
@@ -22,11 +22,11 @@
     <div class="container text-center">
         <div class="row justify-content-evenly me-0 me-lg-5">
             <br>
-          <div class="col-12 col-lg-5 text-bg-dark p-3 rounded">
+          <div class="col-12 col-lg-5 bg-p p-3 rounded">
             <h2><b>Berdasarkan Syariat Islam</b></h2>
             <h4 class="">Pemakaman Islam Madinah  Memori Garden Kab Bogor dikelola berdasarkan syariat Islam, mulai dari penanganan jenazah sebelum dimakamkan hingga perawatan dan penjagaan makam pasca pemakaman, seluruhnya mengikuti aturan Islam.</h4>
           </div>
-          <div class="col-12 col-lg-5 text-bg-dark p-3 rounded mt-2 mt-lg-0">
+          <div class="col-12 col-lg-5 bg-s p-3 rounded mt-2 mt-lg-0">
             <h2><b>Dikelola Secara Profesional</b></h2>
             <h4 class="text-justify">Selain syar’i, Pemakaman Islam  Madinah Memori Garden Kab Bogor juga dikelola secara profesional sehingga menjadi salah satu taman pemakaman di Kab Bogor yang terbaik.</h4>
           </div>
@@ -205,15 +205,15 @@
 <div class="container text-center">
     <h1><strong>Q & A</strong></h1>
 
-    {{-- Accordion --}}
-    <div class="accordion text-start" id="accordionExample">
+    {{-- Accordion2 --}}
+    <div class="accordion text-start" id="accordionExample2">
         <div class="accordion-item">
           <h2 class="accordion-header">
             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSatu" aria-expanded="true" aria-controls="collapseSatu">
                 <strong>•	Apa Saja Syarat Pemakaman yang sesuai Syariat Islam?</strong>
             </button>
           </h2>
-          <div id="collapseSatu" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+          <div id="collapseSatu" class="accordion-collapse collapse show" data-bs-parent="#accordionExample2">
             <div class="accordion-body">
                 •	Menghadap kiblat <br>
                 •	Lahan makam Muslim tidak boleh bercampur dengan makam non-Muslim <br>
@@ -232,7 +232,7 @@
                <strong> •	Apa Saja Pelayanan yang Didapatkan dari Madinah Memorial Gerden?</strong>
             </button>
           </h2>
-          <div id="collapseDua" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div id="collapseDua" class="accordion-collapse collapse" data-bs-parent="#accordionExample2">
             <div class="accordion-body">
                 Anda akan mendapatkan fasilitas yang mewah dan pelayanan terbaik selama 24 jam, seperti masjid, musala, toilet dan tempat parkir. Kami menyediakan lahan pemakaman hingga persiapan prosesi pemakaman yang khidmat dan dipimpin oleh ustad. Perawatan makam juga dilakukan dengan rutin dan Anda tidak perlu lagi memikirkan biaya perawatan rumput setiap bulan atau tahunnya. Setiap unit makam dilengkapi dengan nomor alamat sehingga mudah ditemukan saat dikunjungi.
             </div>
@@ -244,7 +244,7 @@
                <strong> •	Mengapa Harus Memilih Pemakaman Madinah Memorial Gerden?</strong>
             </button>
           </h2>
-          <div id="collapseTiga" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div id="collapseTiga" class="accordion-collapse collapse" data-bs-parent="#accordionExample2">
             <div class="accordion-body">
                 Madinah Memorial Gerden adalah area pemakaman di Kabupaten Bogor, Jawa Barat yang memenuhi syariat Islam dalam proses pengelolaannya. Selain itu, tim kami juga senantiasa merawat setiap makam sehingga tidak ditumbuhi rumput dan asri saat dikunjungi. Area pemakaman kami dikelilingi oleh landscape pemandangan yang indah dan area wisata, sehingga anak-anak senang diajak berziarah ke makam keluarga besarnya.
             </div>
@@ -256,7 +256,7 @@
               <strong>  •	Bagaimana Cara Mengunjungi Madinah Memorial Gerden?</strong>
             </button>
           </h2>
-          <div id="collapseEmpat" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div id="collapseEmpat" class="accordion-collapse collapse" data-bs-parent="#accordionExample2">
             <div class="accordion-body">
                 Mudah sekali. Anda hanya perlu melewati Jalan Transyogy Cibubur Cianjur dalam perjalanan lewat jalan alternative menuju Puncak dan Anda sudah tiba di Madinah Memorial Gerden dan , -+ 40 menit dari Madinah Memorial Gerden sampai di Taman Bunga Cipanas Puncak. Lokasi kami sangat strategis, sehingga pengunjung dari Jabodetabek dan sekitarnya dengan mudah menjangkau Madinah Memorial Gerden untuk berziarah.
             </div>
@@ -268,7 +268,7 @@
                <strong> •	Bagaimana Cara Berziarah di Madinah Memorial Gerden?</strong>
             </button>
           </h2>
-          <div id="collapseLima" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div id="collapseLima" class="accordion-collapse collapse" data-bs-parent="#accordionExample2">
             <div class="accordion-body">
                 Sebaiknya para pengunjung sebelum berangkat berziarah melakukan booking jadwal kedatangan Anda, terutama bagi keluarga yang Bersama rombongan besar. Waktu ziarah adalah 2 jam, dan kami menyediakan fasilitas tenda serta kursi untuk setiap pesanan yang masuk.
             </div>
@@ -277,36 +277,38 @@
         <div class="accordion-item">
           <h2 class="accordion-header">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEnam" aria-expanded="false" aria-controls="collapseEnam">
-               <strong> •	Apakah Madinah Memorial Gerden Sudah memiliki legalitas lengkap…?</strong>
+               <strong> •	Apakah Madinah Memorial Gerden Sudah memiliki legalitas lengkap?</strong>
             </button>
           </h2>
-          <div id="collapseEnam" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div id="collapseEnam" class="accordion-collapse collapse" data-bs-parent="#accordionExample2">
             <div class="accordion-body">
-                Madinah Memorial Gerden adalah tempat pemakaman Islam yang dikelola oleh PT BOGOR TIMUR PERKASA dan Yayasan Istana Yatim Insan Mulia Cita Madani (YAIS IMCM) Artinya, menghadirkan rasa aman dan nyaman. 
+              Madinah Memorial Gerden adalah tempat pemakaman Islam yang dikelola oleh PT BOGOR TIMUR PERKASA dan Yayasan Istana Yatim Insan Mulia Cita Madani (YAIS IMCM) Artinya, menghadirkan rasa aman dan nyaman. 
+            </div>
           </div>
         </div>
         <div class="accordion-item">
           <h2 class="accordion-header">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTujuh" aria-expanded="false" aria-controls="collapseTujuh">
-               <strong>•  Apa Saja Layanan saat Prosesi Pemakaman yang Bisa Didapatkan?</strong>
+               <strong> •  Apa Saja Layanan saat Prosesi Pemakaman yang Bisa Didapatkan?</strong>
             </button>
           </h2>
-          <div id="collapseTujuh" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div id="collapseTujuh" class="accordion-collapse collapse" data-bs-parent="#accordionExample2">
             <div class="accordion-body">
-                Kami menyediakan pelayanan yang lengkap saat prosesi pemakaman. Tim kami akan menyambut Anda dan keluarga di pintu gerbang Madinah Memorial Gerden . Berikut ini adalah layanan selama prosesi pemakaman: <br>
-                •	jasa gali dan tutup lubang <br>
-                •	ustadz pendamping prosesi pemakaman<br>
-                •	dokumentasi video<br>
-                •	tenda ukuran 6x8 meter 1 pcs<br>
-                •	50 buah kursi lipat<br>
-                •	tangga turun ke liang kubur<br>
-                •	panggung (jika perlu) dan karpet<br>
-                •	sound system dan MC<br>
-                •	1 buah podium<br>
-                •	2 dus air mineral<br>
-                •	1 buah spanduk ucapan belasungkawa<br>
-                •	nisan sementara<br>
-                •	papan ari
+              Kami menyediakan pelayanan yang lengkap saat prosesi pemakaman. Tim kami akan menyambut Anda dan keluarga di pintu gerbang Madinah Memorial Gerden . Berikut ini adalah layanan selama prosesi pemakaman: <br>
+              •	jasa gali dan tutup lubang <br>
+              •	ustadz pendamping prosesi pemakaman<br>
+              •	dokumentasi video<br>
+              •	tenda ukuran 6x8 meter 1 pcs<br>
+              •	50 buah kursi lipat<br>
+              •	tangga turun ke liang kubur<br>
+              •	panggung (jika perlu) dan karpet<br>
+              •	sound system dan MC<br>
+              •	1 buah podium<br>
+              •	2 dus air mineral<br>
+              •	1 buah spanduk ucapan belasungkawa<br>
+              •	nisan sementara<br>
+              •	papan ari
+            </div>
           </div>
         </div>
         <div class="accordion-item">
@@ -315,9 +317,10 @@
                <strong> •	Untuk Kebutuhan Pemakaman, Harus Menghubungi Kemana?</strong>
             </button>
           </h2>
-          <div id="collapseDelapan" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div id="collapseDelapan" class="accordion-collapse collapse" data-bs-parent="#accordionExample2">
             <div class="accordion-body">
-                Untuk Pelayanan Pemakaman, Hubungi 081213469281
+              Untuk Pelayanan Pemakaman, Hubungi +{{ $noWA }}
+            </div>
           </div>
         </div>
       </div>

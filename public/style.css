@@ -1,26 +1,52 @@
 /* Navbar */
 *{
-    font-family: Signika;
+    font-family: Signika, Arial, Helvetica, sans-serif;
 }
 
-.navbar{
-    position: relative;
-    z-index: 1;
+:root{
+    --bg-primary: #231917;
+    --bg-secondary: #cd9933;
 }
+
+.bg-p{
+    background-color: var(--bg-primary);
+    color: white;
+}
+
+.bg-s{
+    background-color: var(--bg-secondary);
+}
+
+.nav-link{
+    color: var(--bg-secondary);
+}
+
+.nav-link.active{
+    color: var(--bg-primary) !important;
+}
+
+.offcanvas-title{
+    color: var(--bg-primary);
+}
+
+/* .offcanvas-header, .offcanvas-body{
+    position: relative;
+    z-index: 2;
+} */
 
 .jumbotron1, .jumbotron2, .jumbotron3{
     background-size: cover;
     height: 640px;
     background-position: center;
-    position: relative;
+    /* position: relative; */
 }
 
-.jumbotron1 .container, .jumbotron2 .container, .jumbotron3 .container{
+/* .jumbotron1 .container, .jumbotron2 .container, .jumbotron3 .container{
     z-index: 1;
     position: relative;
-}
+} */
 
-.jumbotron1::after, .jumbotron2::after, .jumbotron3::after{
+/* .jumbotron1::after, .jumbotron2::after, .jumbotron3::after{
     content: '';
     display: block;
     width: 100%;
@@ -28,14 +54,14 @@
     background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
     position: absolute;
     bottom: 0;
-}
+} */
 
 .jumbotron1{
     background-image: url(img/HalamanUtama.jpeg);
 }
 
 .jumbotron2{
-    background-image: url(img/tampilan.jpeg);
+    background-image: url(img/tampilan.jpg);
 }
 
 .jumbotron3{
@@ -45,7 +71,29 @@
 .d-beranda{
     color: white;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    position: relative;
 }
+
+.d-beranda>h1>b::after {
+    content: '';
+        display: block;
+        border-bottom: 3px solid #231917;
+        width: 35%;
+        margin: auto;
+        /* padding-bottom: 5px;
+        margin-bottom: -8px; */
+  }
+
+  .btn.rounded-pill {
+    background-color: var(--bg-secondary);
+    color: var(--bg-primary); /* Warna teks tombol */
+  }
+  
+  /* Tombol saat dihover */
+  .btn.rounded-pill:hover {
+    background-color: var(--bg-primary);
+    color: var(--bg-secondary); /* Warna teks tombol saat dihover */
+  }
 
 .d-tentang{
     color: white;
@@ -81,6 +129,16 @@
     color: white;
 }
 
+.btn-panduan{
+    background-color: var(--bg-secondary);
+    color: var(--bg-primary); /* Warna teks tombol */    
+}
+
+.btn-panduan:hover{
+    background-color: var(--bg-primary);
+    color: var(--bg-secondary); /* Warna teks tombol saat dihover */
+}
+
 .footer{
     background-color: black;
     color: white;
@@ -108,27 +166,56 @@
 }
 
 .footer .c-right{
-    background-color: grey;
-    color: black;
+    background-color: var(--bg-primary);
+    color: var(--bg-secondary);
 }
 
+/* Pengaturan Accordion */
+.accordion{
+    --bs-accordion-btn-bg : var(--bg-secondary);
+    --bs-accordion-active-bg : var(--bg-primary);
+    --bs-accordion-active-color : white;
+    --bs-accordion-btn-focus-box-shadow : none;
+    --bs-accordion-border-color : white;
+    --bs-accordion-border-width : 5px;
+}
 
 /* Dekstops */
+@media (min-width: 768px) { 
+    .footer .tengah{
+        text-align: center;
+    }
+    
+    .footer .kanan{
+        text-align: end;
+    }
+}
+
 @media (min-width: 992px) { 
     .navbar .nav-link:hover::after{
         content: '';
         display: block;
-        border-bottom: 3px solid #0B63DC;
+        border-bottom: 3px solid var(--bg-primary);
         width: 50%;
         margin: auto;
         padding-bottom: 5px;
         margin-bottom: -8px;
     }
+
+    .panduan-card{
+        height: 350px;
+    }
 }
 
-@media (max-width: 768px) { 
-    .jumbotron1, .jumbotron2, .jumbotron3{
-        height: 420px;
+@media (min-width: 1200px) {
+    .panduan-card{
+        height: 300px;
+    }
+} 
 
+
+@media (max-width: 768px) { 
+    .jumbotron1, .jumbotron2, .jumbotron3, .masjid1, .lokasia1{
+        height: 420px;
     }
 }
