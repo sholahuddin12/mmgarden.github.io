@@ -3,6 +3,17 @@
     font-family: Signika, Arial, Helvetica, sans-serif;
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+body {
+    display: grid;
+    grid-template-rows: auto 1fr; /* Satu baris untuk konten, satu baris untuk footer */
+    min-height: 100vh; /* Membuat body setidaknya setinggi viewport */
+  }
+
 :root{
     --bg-primary: #231917;
     --bg-secondary: #cd9933;

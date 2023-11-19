@@ -1,19 +1,21 @@
 @extends('layouts.main')
 
 @section('container')
-    <div class="container">
+    <div class="container isi">
         <div class="div">
             <div class="row">
-                <h1>DATABASE</h1>
+                <a href="/database" class="navbar-brand">
+                    <h1>DATABASE</h1>
+                </a>
             </div>
             <div class="row justify-content-between">
                 <div class="col-md-3 mb-3">
-                    <a href="" class="btn btn-primary rounded-pill">Tambah Data</a>
+                    <a href="database/posts" class="btn btn-primary rounded-pill">Tambah Data</a>
                 </div>
                 <div class="col-md-6 mb-3">
                     <form action="/database">
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="Cari..." name="search">
+                            <input type="text" class="form-control" placeholder="Cari..." name="search" value="{{ request('search') }}">
                             <button class="btn btn-outline-primary" type="submit">Cari</button>
                           </div>
                           
@@ -38,9 +40,9 @@
               </tr>
             </thead>
             <tbody>
-                @foreach ($listkavling as $list)
+                @foreach ($listkavling as $key => $list)
                 <tr>
-                    <th scope="row">{{ $list->id }}</th>
+                    <th scope="row">{{ ++$key }}</th>
                     <td>{{ $list->nama }}</td>
                     <td>{{ $list->formatRupiah('booking') }},-</td>
                     <td>{{ $list->panjang }}m</td>

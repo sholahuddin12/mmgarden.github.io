@@ -11,12 +11,12 @@ class ListKavling extends Model
     use HasFactory;
     use HasFormatRupiah;
 
-    protected $guarded = ['id'];
+    protected $guarded = ['id']; //ga boleh diisi sendiri (selain id boleh di isi sendiri)
 
-    public function scopeFilter($query)
+    public function scopeFilter($query, array $filters)
     {
-        if (request('search')) {
-            $query->where('nama', 'like', '%' . request('search') . '%');
-        }
+        $query->when($filters['search'] ?? false, function ($query, $search) {
+            return $query->where('nama', 'like', '%' . $search . '%');
+        });
     }
 }

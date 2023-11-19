@@ -45,7 +45,7 @@
   </div>
 </div>
 
-<div class="container text-center mt-3">
+<div class="container text-center my-3">
     <h3>Tersedia berbagai pilihan type kavling yang dapat disesuaikan dengan kebutuan pengguna mulai dari kavling perorangan, pasangan atau keluarga.</h3>
     <h3>Berikut pilihan kavling yang tersedia di <strong>MMGarden</strong> :</h3>
     <div class="container text-center">

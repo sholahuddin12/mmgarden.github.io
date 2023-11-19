@@ -102,7 +102,7 @@
           </div> 
     </div>
 </section>
-<section id="panduan3" class="panduan3 mt-3">
+<section id="panduan3" class="panduan3 mt-3 mb-4">
     <div class="container pt-1">
         <div class="card">
             <div class="card-header">

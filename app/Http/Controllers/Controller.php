@@ -38,9 +38,17 @@ class Controller extends BaseController
 
     function database()
     {
+        // $database = ListKavling::all();
+
+        // if (request('search')) {
+        //     $database->where('nama', 'like', '%' . request('search') . '%');
+        //     // $database = ListKavling::all()->where('nama', 'like', '%' . request('search') . '%');
+        // }
+
         return view('database', [
             "title" => "Database",
-            "listkavling" => ListKavling::latest()->filter()->get(),
+            // "listkavling" => $database,
+            "listkavling" => ListKavling::filter(request(['search']))->get(),
             "noWA" => "6281213469281"
         ]);
     }

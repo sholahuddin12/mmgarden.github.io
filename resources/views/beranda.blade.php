@@ -38,7 +38,7 @@
 
 {{-- Accordion --}}
 <div class="container">
-    <h1></h1>
+    {{-- <h1></h1> --}}
     <div class="accordion" id="accordionExample">
         {{-- 1 --}}
         <div class="accordion-item">
@@ -202,7 +202,7 @@
 
 <div class="lokasia1 my-5"></div>
 
-<div class="container text-center">
+<div class="container text-center mb-4">
     <h1><strong>Q & A</strong></h1>
 
     {{-- Accordion2 --}}
