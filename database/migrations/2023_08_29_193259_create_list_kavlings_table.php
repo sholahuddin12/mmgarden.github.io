@@ -14,13 +14,13 @@ return new class extends Migration
         Schema::create('list_kavlings', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nama');
-            $table->integer('kapasitas');
-            $table->integer('booking');
-            $table->char('panjang');
-            $table->char('lebar');
-            $table->char('total');
-            $table->integer('tunai');
-            $table->integer('cicil');
+            $table->string('kapasitas');
+            $table->string('booking');
+            $table->string('panjang');
+            $table->string('lebar');
+            $table->string('total');
+            $table->string('tunai');
+            $table->string('cicil');
         });
     }
 

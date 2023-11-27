@@ -1,64 +1,68 @@
-@extends('layouts.main')
+@extends('layouts.databaseLayout')
 
 @section('container')
-    <div class="container isi">
-        <div class="div">
-            <div class="row">
-                <a href="/database" class="navbar-brand">
-                    <h1>DATABASE</h1>
-                </a>
-            </div>
-            <div class="row justify-content-between">
-                <div class="col-md-3 mb-3">
-                    <a href="database/posts" class="btn btn-primary rounded-pill">Tambah Data</a>
-                </div>
-                <div class="col-md-6 mb-3">
-                    <form action="/database">
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="Cari..." name="search" value="{{ request('search') }}">
-                            <button class="btn btn-outline-primary" type="submit">Cari</button>
-                          </div>
-                          
-                    </form>
-                </div>
-            </div>
-        </div>
-        <div class="table-responsive">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th scope="col">No</th>
-                        <th scope="col">Nama Makam</th>
-                        <th scope="col">Kapasitas</th>
-                        <th scope="col">Booking Fee</th>
-                        <th scope="col">Ukuran (P)</th>
-                        <th scope="col">Ukuran (L)</th>
-                        <th scope="col">Ukuran (T)</th>
-                        <th scope="col">Harga Tunai</th>
-                        <th scope="col">Harga Cicilan</th>
-                        <th scope="col">Tindakan</th>
-              </tr>
-            </thead>
-            <tbody>
-                @foreach ($listkavling as $key => $list)
-                <tr>
-                    <th scope="row">{{ ++$key }}</th>
-                    <td>{{ $list->nama }}</td>
-                    <td>{{ $list->formatRupiah('booking') }},-</td>
-                    <td>{{ $list->panjang }}m</td>
-                    <td>{{ $list->lebar }}m</td>
-                    <td>{{ $list->panjang }}m</td>
-                    <td>{{ $list->total }}m<sup>2</sup></td>
-                    <td>{{ $list->formatRupiah('tunai') }},-</td>
-                    <td>{{ $list->formatRupiah('cicil') }},-</td>
-                    <td><div class="text-center">
-                        <a href=""><i class="bi bi-pencil-square"></i></a>
-                        <a href=""><i class="bi bi-trash"></i></a></td>
-                    </div>
-                </tr>
-                @endforeach
-            </tbody>
-          </table>
-        </div>
+    
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <a href="/database" class="h2 text-decoration-none">Database </a>
+</div>
+<div class="row">
+    <div class="col-3 pt-2">
+        <a href="database/create" class="btn btn-secondary mb-3">Buat data baru</a>
     </div>
-    @endsection
+    <div class="col-9">
+        @if (session()->has('success'))
+            <div class="alert alert-success" role="alert">
+                {{ session('success') }}
+            </div>
+        @endif
+    </div>
+</div>
+<div class="table-responsive">
+    <table class="table table-striped table-sm">
+        <thead>
+            <tr class="text-center">
+                <th scope="col">No</th>
+                <th scope="col">Nama Makam</th>
+                <th scope="col">Kapasitas</th>
+                <th scope="col">Booking Fee</th>
+                <th scope="col">Ukuran (P)</th>
+                <th scope="col">Ukuran (L)</th>
+                <th scope="col">Ukuran (T)</th>
+                <th scope="col">Harga Tunai</th>
+                <th scope="col">Harga Cicilan</th>
+                <th scope="col">Tindakan</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach ($listkavling as $list)
+            <tr>
+                <th scope="row">{{ $loop->iteration }}</th>
+                <td>{{ $list->nama }}</td>
+                <td>{{ $list->kapasitas }}</td>
+                <td>{{ $list->booking}},-</td>
+                {{-- <td>{{ $list->formatRupiah('booking') }},-</td> --}}
+                <td>{{ $list->lebar }}m</td>
+                <td>{{ $list->panjang }}m</td>
+                <td>{{ $list->total }}<sup>2</sup></td>
+                <td>{{ $list->tunai}},-</td>
+                <td>{{ $list->cicil}},-</td>
+                {{-- <td>{{ $list->formatRupiah('tunai') }},-</td>
+                <td>{{ $list->formatRupiah('cicil') }},-</td> --}}
+                <td class="text-center">
+                    <a href="/database/{{ $list->id }}/edit" title="Ubah" class="btn"><i class="bi bi-pencil-square"></i></a>
+                    <form action="/database/{{ $list->id }}" method="POST" class="d-inline">
+                        <input type="text" name="id" id="id" hidden value="{{ $list->id }}">
+                        @method('DELETE')
+                        @csrf
+                        <button class="btn" title="Hapus" type="submit"
+                        onclick="return confirm('Yakin ingin menghapus data ini?')"
+                        ><i class="bi bi-trash"></i></button>
+                    </form>
+                </td>
+            </tr>
+            @endforeach
+        </tbody>
+    </table>
+</div>
+
+@endsection

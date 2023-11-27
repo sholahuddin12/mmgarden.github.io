@@ -14,7 +14,7 @@ class Controller extends BaseController
     function index()
     {
         return view('beranda', [
-            "title" => "MMGarden | Home",
+            "title" => "Home",
             "noWA" => "6281213469281"
         ]);
     }
@@ -22,7 +22,7 @@ class Controller extends BaseController
     function listkavling()
     {
         return view('listkavling', [
-            "title" => "MMGarden | List",
+            "title" => "List",
             "listkavling" => ListKavling::all(),
             "noWA" => "6281213469281"
         ]);
@@ -31,24 +31,7 @@ class Controller extends BaseController
     function panduan()
     {
         return view('panduan', [
-            "title" => "MMGarden | Panduan",
-            "noWA" => "6281213469281"
-        ]);
-    }
-
-    function database()
-    {
-        // $database = ListKavling::all();
-
-        // if (request('search')) {
-        //     $database->where('nama', 'like', '%' . request('search') . '%');
-        //     // $database = ListKavling::all()->where('nama', 'like', '%' . request('search') . '%');
-        // }
-
-        return view('database', [
-            "title" => "Database",
-            // "listkavling" => $database,
-            "listkavling" => ListKavling::filter(request(['search']))->get(),
+            "title" => "Panduan",
             "noWA" => "6281213469281"
         ]);
     }

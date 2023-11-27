@@ -49,8 +49,7 @@
     <h3>Tersedia berbagai pilihan type kavling yang dapat disesuaikan dengan kebutuan pengguna mulai dari kavling perorangan, pasangan atau keluarga.</h3>
     <h3>Berikut pilihan kavling yang tersedia di <strong>MMGarden</strong> :</h3>
     <div class="container text-center">
-        <div class="row justify-content-evenly me-0 me-lg-5">
-            <br>
+        <div class="row row-cols-sm-2 justify-content-evenly me-0 me-lg-5">
             @foreach ($listkavling as $list)  
             <div class="col-12 col-lg-4 p-3 ">
               <div class="card text-start">
@@ -60,10 +59,10 @@
                 <div class="card-body">
                   <p class="card-text">Kapasitas {{ $list->kapasitas }}</p>
                   {{-- <p class="card-text">Booking Fee {{ $list->formatRupiah('booking') }},-</p> --}}
-                  <p class="card-text">Ukuran {{ $list->panjang }}m x {{ $list->lebar }}m ({{ $list->total }}m<sup>2</sup>)</p>
+                  <p class="card-text">Ukuran {{ $list->panjang }}m x {{ $list->lebar }}m ({{ $list->total }}<sup>2</sup>)</p>
                 </div>
                 <div class="card-footer text-body-secondary">
-                  {{ $list->formatRupiah('tunai') }},- <br>
+                  {{ $list->tunai }},- <br>
                   {{-- Cicil : {{ $list->formatRupiah('cicil') }},- --}}
                 </div>
               </div>

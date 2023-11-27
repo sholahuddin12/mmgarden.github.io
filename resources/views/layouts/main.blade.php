@@ -21,7 +21,7 @@
     {{-- Css Sendiri --}}
     <link rel="stylesheet" href="/style.css">
 
-    <title>{{ $title }}</title>
+    <title>MMGarden | {{ $title }}</title>
 </head>
 
 <body>
@@ -42,15 +42,34 @@
                     </div>
                     <div class="offcanvas-body">
                         <ul class="navbar-nav justify-content-end fs-5 flex-grow-1 pe-3">
-                            <li class="nav-item">
-                                <a class="nav-link {{ $title == 'MMGarden | Home' ? 'active' : '' }}" aria-current="page" href="/">Beranda</a>
+                            <li class="nav-item garisbawah">
+                                <a class="nav-link {{ Request::is('/') ? 'active' : '' }}" aria-current="page" href="/">Beranda</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link {{ $title == 'MMGarden | List' ? 'active' : '' }}" href="/listkavling">List Kavling</a>
+                            <li class="nav-item garisbawah">
+                                <a class="nav-link {{ Request::is('listkavling') ? 'active' : '' }}" href="/listkavling">List Kavling</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link {{ $title == 'MMGarden | Panduan' ? 'active' : '' }}" href="/panduan">Panduan Pemesanan</a>
+                            <li class="nav-item garisbawah">
+                                <a class="nav-link {{ Request::is('panduan') ? 'active' : '' }}" href="/panduan">Panduan Pemesanan</a>
                             </li>
+                            @auth
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                  {{ auth()->user()->name }}
+                                </a>
+                                <ul class="dropdown-menu">
+                                  <li><a class="dropdown-item" href="/database"><i class="bi bi-database"></i> Database</a></li>
+                                  <li>
+                                    <hr class="dropdown-divider">
+                                  </li>
+                                  <li>
+                                    <form action="/logout" method="POST">
+                                        @csrf
+                                        <button type="submit" class="dropdown-item" href="#"><i class="bi bi-box-arrow-right"></i> Keluar</button>
+                                    </form>
+                                </li>
+                                </ul>
+                              </li>
+                            @endauth
                         </ul>
                     </div>
                 </div>
@@ -63,7 +82,7 @@
     </section>
 
     <section id="footer" class="footer">
-        <div class="container mt-4">
+        <div class="container">
             <div class="row justify-content-between pt-2">
                 <div class="col-md-4 col-12 pt-3">
                     <p><strong>Lokasi Kavling Makam Madinah Memorial Garden :</strong></p>
@@ -88,6 +107,9 @@
                         </li>
                         <li class="nav-item">
                           <a class="nav-link" href="/panduan">Panduan Pemesanan</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="/database">Dashbord</a>
                         </li>
                       </ul>
                 </div>
