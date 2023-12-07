@@ -16,6 +16,7 @@
       <div class="form-floating mb-3">
         <input type="text" name="nama" class="form-control" id="nama" placeholder="Nama Makam" required autofocus maxlength="255" value="{{ old('nama', $listkavling->nama) }}">
         <label for="nama">Nama Makam</label>
+        <input type="user_id" name="user_id" hidden readonly value="{{ auth()->user()->id }}">
       </div>
       <div class="row">
         <div class="col-6">

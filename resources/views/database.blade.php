@@ -30,6 +30,7 @@
                 <th scope="col">Ukuran (T)</th>
                 <th scope="col">Harga Tunai</th>
                 <th scope="col">Harga Cicilan</th>
+                <th scope="col">Terakhir Ubah</th>
                 <th scope="col">Tindakan</th>
             </tr>
         </thead>
@@ -46,8 +47,9 @@
                 <td>{{ $list->total }}<sup>2</sup></td>
                 <td>{{ $list->tunai}},-</td>
                 <td>{{ $list->cicil}},-</td>
-                {{-- <td>{{ $list->formatRupiah('tunai') }},-</td>
+                {{-- <td>{{ $QZg2rHL:zy-vG?;list->formatRupiah('tunai') }},-</td>
                 <td>{{ $list->formatRupiah('cicil') }},-</td> --}}
+                <td>{{ $list->user->name }}</td>
                 <td class="text-center">
                     <a href="/database/{{ $list->id }}/edit" title="Ubah" class="btn"><i class="bi bi-pencil-square"></i></a>
                     <form action="/database/{{ $list->id }}" method="POST" class="d-inline">

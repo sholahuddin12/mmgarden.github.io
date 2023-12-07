@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('list_kavlings', function (Blueprint $table) {
             $table->increments('id');
+            $table->foreignId('user_id');
             $table->string('nama');
             $table->string('kapasitas');
             $table->string('booking');
